@@ -1,0 +1,11 @@
+/data/datasets/raw/*
+/data/datasets/labeled/*
+
+/hoovenet/models/
+/hoovenet/runs/
+/cv/videos/*
+
+/cv/plots/*
+/cv/vis_results/*
+
+.idea

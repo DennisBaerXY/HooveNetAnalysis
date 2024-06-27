@@ -55,7 +55,8 @@ Zusätzlich brauchst du mmpose. Benutze die Installations-Anleitung von [hier](h
 
 #### Wichtig: 
 In die Verzeichnisse `data/dataset/raw` müssen noch die rohen Daten, des Datensatzes. Für den Datensatz Horse-10 wurde ein Script `create_data.py` erstellt, dass die ganzen Subfolder auflöst und es zu einer Ein-Ordnerstruktur macht.
-
+Aus grund der Datenmenge werden die Frames nicht mitgeliefert in dem Repo. Die Frames können genau so umbenannt werden wie sie in der annotations file verwendet wird, indem das `create_data.py` script ausgeführt wird und die Bilder daraufhin richtigen Ordner gezogen werden.
+Eine komplette Version des `data` Ordners kann auch [hier](https://drive.google.com/file/d/1qD6eTzvVgt_KSF-0YrrNnfbonP9zaHl6/view?usp=sharing) heruntergeladen werden, es sind die `annotation.csv`, `labeled_frames.txt` und die gelabelten Bilder zur verfügung. 
 
 ### Annotation Tool ✍️
 

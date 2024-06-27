@@ -7,5 +7,7 @@
 
 /cv/plots/*
 /cv/vis_results/*
+/cv/output_videos/*
+/cv/results/*
 
 .idea

@@ -1,18 +1,15 @@
-# Monorepo
+# Monorepo 🐴🎥🤖
 
-Dieses Monorepo enthält mehrere Projekte zur Verarbeitung von Videos, Training von neuronalen Netzen und Annotation von Daten. Jedes Projekt ist in einem eigenen Unterverzeichnis organisiert.
+Dies ist das Mono Repo zum Ausführen der Ausarbeitungen von der Bachelorarbeit `Implementierung und Evaluation von Ansätzen zur sensorbasierten Analyse von Tieren mittels Key-Point Detektion`
+## Verzeichnisstruktur 📂
 
-## Verzeichnisstruktur
-
-\`\`\`
+```
 monorepo/
 │
 ├── annotation_tool/
-│   ├── __init__.py
 │   ├── annotation_tool.py
 │
-├── computer_vision_pipeline/
-│   ├── __init__.py
+├── cv/
 │   ├── main.py
 │   ├── processing.py
 │   ├── plotting.py
@@ -22,102 +19,94 @@ monorepo/
 │   ├── overlay.py
 │
 ├── hoovenet/
-│   ├── __init__.py
 │   ├── model.py
 │   ├── train.py
 │   ├── utils.py
+│   ├── best_models/
 │
 ├── common/
-│   ├── __init__.py
 │   ├── utils.py
 │   ├── constants.py
 │
 ├── data/
 │   ├── datasets/
+│   │   ├── labeled/
 │   │   ├── raw/
-│   │   ├── processed/
-│   ├── frames/
-│   ├── labeled_frames/
 │   ├── annotations.csv
 │   ├── labeled_frames.txt
 │
 ├── requirements.txt
 └── README.md
-\`\`\`
+```
 
-## Anforderungen
+## Anforderungen 🛠️
 
-Stellen Sie sicher, dass Sie die erforderlichen Pakete installiert haben. Die Hauptanforderungen sind in der \`requirements.txt\` Datei im Stammverzeichnis des Monorepos angegeben. Sie können sie mit dem folgenden Befehl installieren:
+Bevor du loslegst, stelle sicher, dass du alle benötigten Pakete installiert hast. Die Hauptanforderungen findest du in der `requirements.txt` Datei im Stammverzeichnis dieses Repos. Installiere sie einfach mit:
 
-\`\`\`
+```
 pip install -r requirements.txt
-\`\`\`
+```
 
-Zusätzlich benötigen Sie PyQt5 für das Annotation Tool. Sie können es mit dem folgenden Befehl installieren:
+Zusätzlich brauchst du mmpose. Benutze die Installations Anleitung von [hier](https://mmpose.readthedocs.io/en/latest/installation.html) 
 
-\`\`\`
-pip install PyQt5
-\`\`\`
+## Projekte 🚀
 
-## Projekte
+### Annotation Tool ✍️
 
-### Annotation Tool
+Das Annotation Tool bietet eine grafische Benutzeroberfläche, mit der du Videoframes ganz einfach mit Hufzuständen annotieren kannst.
 
-Das Annotation Tool bietet eine grafische Benutzeroberfläche zur Annotation von Videoframes mit Hufzuständen.
+- **Verzeichnis**: `annotation_tool/`
+- **Starten**: Navigiere zum Verzeichnis `annotation_tool` und führe das Skript `annotation_tool.py` aus:
 
-- **Verzeichnis**: \`annotation_tool/\`
-- **Starten**: Navigieren Sie zum Verzeichnis \`annotation_tool\` und führen Sie das Skript \`annotation_tool.py\` aus:
-
-\`\`\`
+```
 python annotation_tool.py
-\`\`\`
+```
 
-### Computer Vision Pipeline
+### Computer Vision Pipeline 📹
 
 Die Computer Vision Pipeline verarbeitet Videos, extrahiert Keypoints und erstellt verschiedene Visualisierungen und Overlays.
 
-- **Verzeichnis**: \`computer_vision_pipeline/\`
-- **Starten**: Navigieren Sie zum Verzeichnis \`computer_vision_pipeline\` und führen Sie das Skript \`main.py\` aus:
+- **Verzeichnis**: `cv/`
+- **Starten**: Navigiere zum Verzeichnis `cv` und führe das Skript `main.py` aus:
 
-\`\`\`
+```
 python main.py
-\`\`\`
+```
 
-### Hoovenet
+### Hoovenet 🧠
 
-Das Hoovenet-Projekt umfasst das Training und die Verwendung eines neuronalen Netzes zur Vorhersage von Hufzuständen.
+Hoovenet umfasst das Training und die Verwendung eines neuronalen Netzes zur Vorhersage von Hufzuständen.
 
-- **Verzeichnis**: \`hoovenet/\`
-- **Training starten**: Navigieren Sie zum Verzeichnis \`hoovenet\` und führen Sie das Skript \`train.py\` aus:
+- **Verzeichnis**: `hoovenet/`
+- **Training starten**: Navigiere zum Verzeichnis `hoovenet` und führe das Skript `train.py` aus:
 
-\`\`\`
+```
 python train.py
-\`\`\`
+```
 
-### Gemeinsame Bibliothek
+### Gemeinsame Bibliothek 📚
 
 Gemeinsame Funktionen und Konstanten, die von verschiedenen Projekten verwendet werden.
 
-- **Verzeichnis**: \`common/\`
+- **Verzeichnis**: `common/`
 
-## Konfiguration und Anpassung
+## Konfiguration und Anpassung ⚙️
 
-Alle konfigurierbaren Konstanten sind in \`common/constants.py\` definiert. Sie können dort Pfade, Videoeinstellungen und andere Parameter anpassen.
+Alle konfigurierbaren Konstanten sind in `common/constants.py` definiert. Du kannst dort Pfade, Videoeinstellungen und andere Parameter anpassen.
 
-## Datenverzeichnis
+## Datenverzeichnis 📁
 
-- **\`data/\`**: Enthält die Datensätze, Frames, annotierten Frames und zugehörige Dateien.
+- **`data/`**: Hier findest du die Datensätze, Frames, annotierten Frames und zugehörige Dateien.
 
-## Abhängigkeiten
+## Abhängigkeiten 📦
 
-Stellen Sie sicher, dass Sie die erforderlichen Abhängigkeiten installiert haben. Die wichtigsten Abhängigkeiten umfassen:
+Stelle sicher, dass du die erforderlichen Abhängigkeiten installiert hast. Die wichtigsten Abhängigkeiten umfassen:
 - OpenCV
 - PyTorch
 - torchvision
 - numpy
 - pandas
 - PyQt5
+- mmpose
 
-Diese Abhängigkeiten sind in der \`requirements.txt\` Datei im Stammverzeichnis des Monorepos aufgeführt.
-
----
+Diese Abhängigkeiten, bis auf MMpose sind in der `requirements.txt` Datei im Stammverzeichnis des Monorepos aufgeführt.

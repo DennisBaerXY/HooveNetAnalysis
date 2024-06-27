@@ -47,7 +47,7 @@ Bevor du loslegst, stelle sicher, dass du alle benötigten Pakete installiert ha
 pip install -r requirements.txt
 ```
 
-Zusätzlich brauchst du mmpose. Benutze die Installations Anleitung von [hier](https://mmpose.readthedocs.io/en/latest/installation.html) 
+Zusätzlich brauchst du mmpose. Benutze die Installations-Anleitung von [hier](https://mmpose.readthedocs.io/en/latest/installation.html) 
 
 ## Projekte 🚀
 
@@ -55,6 +55,8 @@ Zusätzlich brauchst du mmpose. Benutze die Installations Anleitung von [hier](h
 
 Das Annotation Tool bietet eine grafische Benutzeroberfläche, mit der du Videoframes ganz einfach mit Hufzuständen annotieren kannst.
 
+#### Wichtig: 
+In die Verzeichnise `data/dataset/raw` müssen noch 
 - **Verzeichnis**: `annotation_tool/`
 - **Starten**: Navigiere zum Verzeichnis `annotation_tool` und führe das Skript `annotation_tool.py` aus:
 
@@ -96,17 +98,7 @@ Alle konfigurierbaren Konstanten sind in `common/constants.py` definiert. Du kan
 
 ## Datenverzeichnis 📁
 
-- **`data/`**: Hier findest du die Datensätze, Frames, annotierten Frames und zugehörige Dateien.
+- **`data/`**: Hier findest du die Datensätze, Frames, annotierten Frames und zugehörige Dateien. Es ist wichtig in `data/dataset/raw` die un-gelabelten Bilder hereinzulegen. Das Model wurde auf dem Datensatz Horse-10 ([Huggingface](https://huggingface.co/datasets/mwmathis/Horse-30)) vortrainiert. Falls andere Bilder zum Trainieren verwendet werden, verwende nicht das Vortrainierte Model.
 
-## Abhängigkeiten 📦
-
-Stelle sicher, dass du die erforderlichen Abhängigkeiten installiert hast. Die wichtigsten Abhängigkeiten umfassen:
-- OpenCV
-- PyTorch
-- torchvision
-- numpy
-- pandas
-- PyQt5
-- mmpose
 
 Diese Abhängigkeiten, bis auf MMpose sind in der `requirements.txt` Datei im Stammverzeichnis des Monorepos aufgeführt.

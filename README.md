@@ -1,4 +1,4 @@
-# Monorepo 🐴🎥🤖
+# Analyse von Tieren mittels Keypoint Detektoren
 
 Dies ist das Mono Repo zum Ausführen der Ausarbeitungen von der Bachelorarbeit `Implementierung und Evaluation von Ansätzen zur sensorbasierten Analyse von Tieren mittels Key-Point Detektion`
 ## Verzeichnisstruktur 📂

@@ -8,6 +8,8 @@ monorepo/
 │
 ├── annotation_tool/
 │   ├── annotation_tool.py
+│   ├── augment-script.py
+│   ├── create_data.py
 │
 ├── cv/
 │   ├── main.py
@@ -51,18 +53,23 @@ Zusätzlich brauchst du mmpose. Benutze die Installations-Anleitung von [hier](h
 
 ## Projekte 🚀
 
+#### Wichtig: 
+In die Verzeichnisse `data/dataset/raw` müssen noch die rohen Daten, des Datensatzes. Für den Datensatz Horse-10 wurde ein Script `create_data.py` erstellt, dass die ganzen Subfolder auflöst und es zu einer Ein-Ordnerstruktur macht.
+
+
 ### Annotation Tool ✍️
 
 Das Annotation Tool bietet eine grafische Benutzeroberfläche, mit der du Videoframes ganz einfach mit Hufzuständen annotieren kannst.
 
-#### Wichtig: 
-In die Verzeichnise `data/dataset/raw` müssen noch 
 - **Verzeichnis**: `annotation_tool/`
 - **Starten**: Navigiere zum Verzeichnis `annotation_tool` und führe das Skript `annotation_tool.py` aus:
 
 ```
 python annotation_tool.py
 ```
+
+Die produzierten Daten können dann mithilfe des `augment-script.py` augmentiert werden so das mehr Daten und eine bessere generalisierbarkeit/ robustheit vorhanden ist.
+Hier müssen aber unbedingt die Konstanten angepasst werden um auf die richtigen Verzeichnisse zu zeigen!
 
 ### Computer Vision Pipeline 📹
 

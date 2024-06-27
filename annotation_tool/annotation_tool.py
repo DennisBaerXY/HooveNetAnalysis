@@ -5,8 +5,7 @@ from glob import glob
 import shutil
 import time
 import torch
-from torchvision import transforms
-from PIL import Image
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 from hoovenet.model import HoovesModel
@@ -171,7 +170,7 @@ class HoofAnnotationTool(QtWidgets.QWidget):
         print(f"Loaded frame: {self.frame_path}")
 
         # Use model predictions for initial state
-        predictions = model_predict(self.frame_path,model)
+        predictions = model_predict(self.frame_path, model, device)
         self.annotation_state = predictions
 
         print(f"Model predictions: {predictions} for frame {self.frame_name} (On Ground: 1, Off Ground: 0)")
@@ -184,7 +183,6 @@ class HoofAnnotationTool(QtWidgets.QWidget):
                 self.hoof_buttons[hoof]['on_ground'].setStyleSheet(f"background-color: {self.default_button_color}")
                 self.hoof_buttons[hoof]['off_ground'].setStyleSheet(f"background-color: {self.selected_button_color}")
 
-            prob_text = f"Model Prediction Confidence: {probabilities[hoof]:.2f}"
 
         self.update_info_label()
 
